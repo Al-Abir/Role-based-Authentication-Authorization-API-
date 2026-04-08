@@ -4,7 +4,7 @@ import { User } from '../types/User'
 export const createUserService = async (
   data: Omit<User, 'id' | 'created_at'>,
 ): Promise<User> => {
-  // ✅ explicit Promise<User>
+  // explicit Promise<User>
   const query = `
     INSERT INTO users (name, email)
     VALUES ($1, $2)
